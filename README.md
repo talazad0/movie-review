@@ -3,6 +3,16 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
+1 generate all list for movies
+
+2 route for indiviual movie
+
+3 create user using pundit
+
+
+
+
+
 Things you may want to cover:
 
 * Ruby version

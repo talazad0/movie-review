@@ -2,7 +2,7 @@
 
 <ul>
   <% @movies.each do |movie| %>
-    <li><%= movie.name %>
+    <li><%= link_to movie.name, movie_path(movie) %>
         <%= movie.synopsis %>
     </li>
   <% end %>
