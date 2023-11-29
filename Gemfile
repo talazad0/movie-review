@@ -74,3 +74,4 @@ gem 'devise'
 
 gem 'bootstrap', "~> 5.2"
 
+gem "dotenv-rails"
