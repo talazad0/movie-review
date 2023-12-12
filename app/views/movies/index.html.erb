@@ -1,9 +1,43 @@
-<h1>All Movies</h1>
+<div class="top-movies-container">
+  <div class="main-title">
+    <h1>Random Movies</h1>
+  </div>
 
-<ul>
-  <% @movies.each do |movie| %>
-    <li><%= link_to movie.name, movie_path(movie) %>
-        <%= movie.synopsis %>
-    </li>
-  <% end %>
-</ul>
+  <ul class="row">
+    <% @movies.first(4).each do |movie| %>
+      <div class="col-md-3">
+        <div class="movie-card">
+          <li class="movie-title"><%= link_to movie.name, movie_path(movie) %>
+          <p class="synopsis"><%= movie.synopsis %></p>
+          </li>
+        </div>
+      </div>
+    <% end %>
+  </ul>
+</div>
+
+<style>
+  .top-movies-container {
+  margin: 20px; /* Add margin around the container */
+}
+
+.movie-card {
+  border: 1px solid #ddd; /* Add a border for separation */
+  padding: 15px;
+  margin-bottom: 20px; /* Add space between movie cards */
+}
+
+/* Optional: Add hover effect on movie cards */
+.movie-card:hover {
+  background-color: #f5f5f5;
+}
+
+.main-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+</style>
